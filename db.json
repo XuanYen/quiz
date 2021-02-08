@@ -1,6 +1,8 @@
 {
     "introToeic":{
         "part1": {
+            "title": "Part I: Picture Description",
+            "directions": "For each question, you will see a picture and you will hear four short statements. The statements will be spoken just one time. They will not be printed in your test book so you must listen carefully to understand what the speaker says. When you hear the four statements, look at the picture and choose the statement that best describes what you see in the picture. Choose the best answer A, B, C or D",
             "audio": "/vi/Toeictest//files/audios/g_20201106-1031071.mp3",
             "questions": [
                 {

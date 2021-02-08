@@ -2,11 +2,13 @@ import axios from 'axios';
 
 const SET_TEST='SET_TEST';
 const SET_ALL_TEST='SET_ALL_TEST';
+const SET_INTRO='SET_INTRO';
 
 const initialState={
     loading: false,
     items: [],
-    item: {}
+    item: {},
+    intro: {}
 }
 
 export const setTest=(item)=>({
@@ -17,6 +19,11 @@ export const setTest=(item)=>({
 export const setAllTest=(items)=>({
     type: SET_ALL_TEST,
     payload: items
+})
+
+export const setIntro=(intro)=>({
+    type: SET_INTRO,
+    payload: intro
 })
 
 export const fetchTest=(id)=>async(dispatch)=>{
@@ -33,6 +40,12 @@ export const fetchAllTest=()=>async dispatch=>{
     }
 }
 
+export const fetchIntro=()=>async dispatch=>{
+    const res=await axios.get('https://my-json-server.typicode.com/XuanYen/quiz/introToeic');
+    if(res.status===200){
+        dispatch(setIntro(res.data));
+    }
+}
 const reducer=(state=initialState, action)=>{
     switch(action.type){
         case SET_TEST:
@@ -44,6 +57,11 @@ const reducer=(state=initialState, action)=>{
             return{
                 ...state,
                 items: action.payload
+            }
+        case SET_INTRO: 
+            return{
+                ...state,
+                intro: action.payload
             }
         default: 
             return state;

@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const IntroTest=(props)=>{
-    const { test, handleStartTest }=props;
+    const { test }=props;
     const {title, describe, total, timeLis, timeRead}=test;
     return(
         <div>
@@ -9,7 +10,9 @@ const IntroTest=(props)=>{
             <h6>Total time: {total} minutes</h6>
             <p>Listening: {timeLis} minutes</p>
             <p>Reading: {timeRead} minutes</p>
-            <button onClick={()=>handleStartTest()}>START</button>
+            <Link to={'/test/part-1-intro'}>
+                START
+            </Link>
         </div>
     )
 }
