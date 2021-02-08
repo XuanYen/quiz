@@ -21,6 +21,9 @@ const Test=(props)=>{
                 <Route path={`/test/intro`}>
                     <IntroTest test={test} fetchTest={fetchTest} handleStartTest={handleStartTest} />
                 </Route>
+                <Route path={`/test/part-1-intro`}>
+                    <IntroPart1 />
+                </Route>
             </Switch>
         </BrowserRouter>
     )
