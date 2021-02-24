@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const IntroPart1=()=>{
+const IntroPart1=(props)=>{
+    const {testId}=props;
     return(
         <div>
             <h1>Part I: Picture Description</h1>
@@ -24,7 +25,7 @@ const IntroPart1=()=>{
                 <li>She is typing on the computer</li>
                 <li>He is sitting next to her</li>
             </ol>
-            <Link to='/test/part-1'>
+            <Link to={`/test/part-1?id=${testId}`}>
             START
             </Link>
         </div>

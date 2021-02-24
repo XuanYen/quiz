@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const IntroTest=(props)=>{
     const { test }=props;
-    const {title, describe, total, timeLis, timeRead}=test;
+    const { title, describe, total, timeLis, timeRead}=test;
     return(
         <div>
             <h1>{title}-{describe}</h1>
